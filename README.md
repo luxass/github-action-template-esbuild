@@ -1,6 +1,6 @@
 # github-action-template-esbuild
 
-An opinionated github actions template
+An opinionated GitHub Actions Template using [esbuild](https://esbuild.github.io) for bundling.
 
 ## Try it now!
 

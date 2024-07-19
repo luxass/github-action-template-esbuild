@@ -18968,7 +18968,7 @@ Support boolean input list: \`true | True | TRUE | false | False | FALSE\``);
 });
 
 // src/index.ts
-var core = __toESM(require_core());
+var core = __toESM(require_core(), 1);
 async function run() {
   core.info("This is a template action");
   const nameToGreet = core.getInput("who-to-greet");
