@@ -10,9 +10,8 @@
   },
   "packageManager": "pnpm@10.15.0",
   "license": "MIT",
-  "main": "dist/index.cjs",
   "scripts": {
-    "build": "esbuild src/index.ts --bundle --platform=node --target=node20 --outfile=dist/index.cjs",
+    "build": "esbuild src/index.ts --bundle --platform=node --target=node24 --format=esm --outfile=dist/index.js",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit"
   },
@@ -26,10 +25,5 @@
     "eslint": "^9.34.0",
     "eslint-plugin-format": "^1.0.1",
     "typescript": "^5.9.2"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild"
-    ]
   }
 }
