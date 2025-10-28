@@ -11,7 +11,7 @@
   "packageManager": "pnpm@10.19.0",
   "license": "MIT",
   "scripts": {
-    "build": "esbuild src/index.ts --bundle --platform=node --target=node24 --format=cjs --outfile=dist/index.cjs",
+    "build": "esbuild src/index.ts --bundle --platform=node --target=node24 --format=esm --outfile=dist/index.mjs",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit"
   },
