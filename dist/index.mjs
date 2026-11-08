@@ -12,7 +12,11 @@ var __require = /* @__PURE__ */ ((x) => typeof require !== "undefined" ? require
   throw Error('Dynamic require of "' + x + '" is not supported');
 });
 var __commonJS = (cb, mod) => function __require2() {
-  return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
+  try {
+    return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
+  } catch (e) {
+    throw mod = 0, e;
+  }
 };
 var __copyProps = (to, from, except, desc) => {
   if (from && typeof from === "object" || typeof from === "function") {
@@ -18589,10 +18593,10 @@ var require_undici = __commonJS({
   }
 });
 
-// node_modules/.pnpm/@actions+core@3.0.0/node_modules/@actions/core/lib/command.js
+// node_modules/.pnpm/@actions+core@3.0.1/node_modules/@actions/core/lib/command.js
 import * as os from "os";
 
-// node_modules/.pnpm/@actions+core@3.0.0/node_modules/@actions/core/lib/utils.js
+// node_modules/.pnpm/@actions+core@3.0.1/node_modules/@actions/core/lib/utils.js
 function toCommandValue(input) {
   if (input === null || input === void 0) {
     return "";
@@ -18615,7 +18619,7 @@ function toCommandProperties(annotationProperties) {
   };
 }
 
-// node_modules/.pnpm/@actions+core@3.0.0/node_modules/@actions/core/lib/command.js
+// node_modules/.pnpm/@actions+core@3.0.1/node_modules/@actions/core/lib/command.js
 function issueCommand(command, properties, message) {
   const cmd = new Command(command, properties, message);
   process.stdout.write(cmd.toString() + os.EOL);
@@ -18660,7 +18664,7 @@ function escapeProperty(s) {
   return toCommandValue(s).replace(/%/g, "%25").replace(/\r/g, "%0D").replace(/\n/g, "%0A").replace(/:/g, "%3A").replace(/,/g, "%2C");
 }
 
-// node_modules/.pnpm/@actions+core@3.0.0/node_modules/@actions/core/lib/core.js
+// node_modules/.pnpm/@actions+core@3.0.1/node_modules/@actions/core/lib/core.js
 import * as os3 from "os";
 
 // node_modules/.pnpm/@actions+http-client@4.0.0/node_modules/@actions/http-client/lib/index.js
@@ -18718,7 +18722,7 @@ var HttpResponseRetryCodes = [
   HttpCodes.GatewayTimeout
 ];
 
-// node_modules/.pnpm/@actions+core@3.0.0/node_modules/@actions/core/lib/summary.js
+// node_modules/.pnpm/@actions+core@3.0.1/node_modules/@actions/core/lib/summary.js
 import { EOL as EOL2 } from "os";
 import { constants, promises } from "fs";
 var __awaiter = function(thisArg, _arguments, P, generator) {
@@ -19002,7 +19006,7 @@ var Summary = class {
 };
 var _summary = new Summary();
 
-// node_modules/.pnpm/@actions+core@3.0.0/node_modules/@actions/core/lib/platform.js
+// node_modules/.pnpm/@actions+core@3.0.1/node_modules/@actions/core/lib/platform.js
 import os2 from "os";
 
 // node_modules/.pnpm/@actions+io@3.0.2/node_modules/@actions/io/lib/io-util.js
@@ -19014,11 +19018,11 @@ var READONLY = fs.constants.O_RDONLY;
 // node_modules/.pnpm/@actions+exec@3.0.0/node_modules/@actions/exec/lib/toolrunner.js
 var IS_WINDOWS2 = process.platform === "win32";
 
-// node_modules/.pnpm/@actions+core@3.0.0/node_modules/@actions/core/lib/platform.js
+// node_modules/.pnpm/@actions+core@3.0.1/node_modules/@actions/core/lib/platform.js
 var platform = os2.platform();
 var arch = os2.arch();
 
-// node_modules/.pnpm/@actions+core@3.0.0/node_modules/@actions/core/lib/core.js
+// node_modules/.pnpm/@actions+core@3.0.1/node_modules/@actions/core/lib/core.js
 var ExitCode;
 (function(ExitCode2) {
   ExitCode2[ExitCode2["Success"] = 0] = "Success";
